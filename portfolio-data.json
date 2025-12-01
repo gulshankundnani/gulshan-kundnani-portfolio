@@ -1,0 +1,151 @@
+{
+  "settings": {
+    "name": "Gulshan Kundnani",
+    "title": "Software Developer",
+    "location": "Surat, India",
+    "summary": "Software developer with 5+ years of professional experience in the .NET Framework and C#. Proven track record in designing,\n developing, and maintaining scalable, high-performance web applications. Adept at working both independently and collaboratively\n within Agile teams to deliver quality solutions on time. Strong problem-solving skills with a commitment to clean, maintainable code\n and continuous learning of emerging technologies. Ability to communicate technical progress and challenges clearly to clients and offer\n support throughout project phases.",
+    "profileImage": "https://avatars.githubusercontent.com/u/42181196"
+  },
+  "sections": {
+    "hero": {
+      "enabled": true,
+      "ctaButtons": [
+        {
+          "text": "Get In Touch",
+          "url": "mailto:gulshankundnani@gmail.com"
+        }
+      ]
+    },
+    "about": {
+      "enabled": true,
+      "skills": {
+        "enabled": true,
+        "title": "Technical Skills",
+        "items": [
+          "C#",
+          ".Net",
+          "MVC",
+          "SQL",
+          "Javascript",
+          "jQuery",
+          "Vuejs",
+          "Html / Css",
+          "Ajax",
+          "Python"
+        ]
+      }
+    },
+    "experience": {
+      "enabled": true,
+      "title": "Work Experience",
+      "items": [
+        {
+          "company": "MICM Net Solutions Pvt Ltd",
+          "position": "Backend Developer",
+          "period": "12/2019 - Present",
+          "description": "Worked closely with cross-functional Agile teams to deliver features on time while managing client expectations effectively.\n Integrated third-party APIs such as RealBooks API, Facebook API, Odoo API, etc ensuring data exchange and enhancing\n system functionality.\n Developed import utilities for various modules to ensure bulk data migration.\n Analyzed and Optimized code to improve system performance and low latency.\n Learned and applied software development best practices and Agile methodologies.\n Collaborated directly with clients to gather requirements, clarify project scope, and provide regular status updates, ensuring\n alignment between technical teams."
+        }
+      ]
+    },
+    "projects": {
+      "enabled": true,
+      "title": "Featured Projects",
+      "items": [
+        {
+          "title": " Telegram Bot",
+          "description": "Automatically detect and remove spam, offensive language, or unwanted content.\n Warn, mute, or ban users breaking group rules without requiring manual admin intervention.\n Welcome new members with custom messages.\n Share reminders, scheduled announcements, or important updates.",
+          "tags": [
+            "PostgreSQL",
+            "Python",
+            "Docker",
+            "Telegram API"
+          ],
+          "previewUrl": "",
+          "repoUrl": "https://github.com/gulshankundnani/MsTokyoBot/"
+        },
+        {
+          "title": " PDF ChatBot",
+          "description": " Instant Document Search & Retrieval.\n Reduces support staff workload by automating answers sourced directly from PDF content.\n Enables interactive learning and quick access to relevant information.\n Saves time by providing concise information without reading the whole document.",
+          "tags": [
+            "Python",
+            "Ollama",
+            "Wizardlm"
+          ],
+          "previewUrl": "",
+          "repoUrl": "https://github.com/gulshankundnani/PDFChatBot/"
+        }
+      ]
+    },
+    "education": {
+      "enabled": true,
+      "title": "Education",
+      "items": [
+        {
+          "institution": "Uka Tarsadia University, Bardoli, India",
+          "degree": "Masters in Computer Application",
+          "period": "2018-2020 (8.1 CGPA)"
+        },
+        {
+          "institution": "SDJ International College, Surat, India",
+          "degree": "Bachelors in Computer Application",
+          "period": "2015-2018 (6.78 CGPA)"
+        }
+      ]
+    },
+    "achievements": {
+      "enabled": false,
+      "title": "Achievements & Certifications",
+      "items": []
+    },
+    "contact": {
+      "enabled": true,
+      "title": "Contact",
+      "email": "gulshankundnani@gmail.com",
+      "phone": "+91 7405747712",
+      "location": "Surat, India"
+    },
+    "social": {
+      "enabled": true,
+      "items": [
+        {
+          "platform": "linkedin",
+          "url": "https://linkedin.com/in/gulshan-k-91394589",
+          "icon": "linkedin"
+        }
+      ]
+    }
+  },
+  "navigation": {
+    "enabled": true,
+    "items": [
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "About",
+        "url": "#about"
+      },
+      {
+        "name": "Projects",
+        "url": "#projects"
+      },
+      {
+        "name": "Experience",
+        "url": "#experience"
+      },
+      {
+        "name": "Education",
+        "url": "#education"
+      },
+      {
+        "name": "Contact",
+        "url": "#contact"
+      }
+    ]
+  },
+  "footer": {
+    "enabled": false,
+    "copyright": "© 2025 Sarah Johnson. All rights reserved."
+  }
+}
