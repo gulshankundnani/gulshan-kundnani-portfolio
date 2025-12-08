@@ -53,7 +53,7 @@
       "items": [
         {
           "title": " Telegram Bot",
-          "description": "Automatically detect and remove spam, offensive language, or unwanted content.<br/> Warn, mute, or ban users breaking group rules without requiring manual admin intervention.\n Welcome new members with custom messages.\n Share reminders, scheduled announcements, or important updates.",
+          "description": "- Automatically detect and remove spam, offensive language, or unwanted content.<br/>- Warn, mute, or ban users breaking group rules without requiring manual admin intervention.<br/>- Welcome new members with custom messages.<br/>- Share reminders, scheduled announcements, or important updates.",
           "tags": [
             "PostgreSQL",
             "Python",
@@ -65,7 +65,7 @@
         },
         {
           "title": " PDF ChatBot",
-          "description": " Instant Document Search & Retrieval.\n Reduces support staff workload by automating answers sourced directly from PDF content.\n Enables interactive learning and quick access to relevant information.\n Saves time by providing concise information without reading the whole document.",
+          "description": "- Instant Document Search & Retrieval.<br/>- Reduces support staff workload by automating answers sourced directly from PDF content.<br/>- Enables interactive learning and quick access to relevant information.<br/>- Saves time by providing concise information without reading the whole document.",
           "tags": [
             "Python",
             "Ollama",
