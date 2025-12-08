@@ -53,7 +53,7 @@
       "items": [
         {
           "title": " Telegram Bot",
-          "description": "- Automatically detect and remove spam, offensive language, or unwanted content.<br/>- Warn, mute, or ban users breaking group rules without requiring manual admin intervention.<br/>- Welcome new members with custom messages.<br/>- Share reminders, scheduled announcements, or important updates.",
+          "description": "> Automatically detect and remove spam, offensive language, or unwanted content.<br/>> Warn, mute, or ban users breaking group rules without requiring manual admin intervention.<br/>> Welcome new members with custom messages.<br/>> Share reminders, scheduled announcements, or important updates.",
           "tags": [
             "PostgreSQL",
             "Python",
