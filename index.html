@@ -89,6 +89,9 @@
           filename: 'Gulshan-Kundnani_Resume.pdf',
           html2canvas: { scale: 2 },
           jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' },
+		  ignoreElements: (el) => { // Skip header, no-pdf class, and hidden elements 
+			  const style = window.getComputedStyle(el);
+			  return ( el.tagName === "HEADER" || el.classList.contains("no-pdf") || style.display === "none" || style.visibility === "hidden" ); }
         }; 
         html2pdf().set(options).from(element).save();
 		  $(".no-pdf").show();
