@@ -84,22 +84,7 @@
       function downloadPDF() 
       { 
 		  $(".no-pdf").hide();
-		  // Get the full HTML of the current page
-		  const htmlContent = document.documentElement.outerHTML;
-		
-		  // Create a Blob with the HTML content
-		  const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
-		
-		  // Create a temporary download link
-		  const link = document.createElement("a");
-		  link.href = URL.createObjectURL(blob);
-		  link.download = "my-webpage.pdf"; // filename
-		
-		  // Trigger the download
-		  link.click();
-		
-		  // Clean up
-		  URL.revokeObjectURL(link.href);
+		  window.print();
 		  $(".no-pdf").show();
       }
 
