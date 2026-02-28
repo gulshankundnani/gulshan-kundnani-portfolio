@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 	<style>
-		@media print { @page { size: A4; margin: 0; /* removes all margins */ }
+		@media print { 
+			@page { size: A4; margin: 0; /* removes all margins */ }
+			#NameHeader{ margin-top: -30mm; }
+		}
 	</style>
   <head>
     <meta charset="UTF-8" />
@@ -529,9 +532,9 @@
           <button id="theme-toggle" class="no-pdf p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white"></button>
       </div>
       <main class="flex-grow max-w-4xl mx-auto px-6 pt-40 pb-8 animate-blur-in">
-        <header class="grid md:grid-cols-3 gap-12 items-center mb-16">
+        <header class="grid md:grid-cols-3 gap-12 items-center mb-16" id="NameHeader">
             <div class="md:col-span-1 flex justify-center">
-              <img src="${data.settings.profileImage}" alt="Profile" class="rounded-full w-40 h-40 object-cover border-4 border-gray-200 dark:border-gray-700" loading="lazy">
+              <img src="${data.settings.profileImage}" alt="Profile" class="no-pdf rounded-full w-40 h-40 object-cover border-4 border-gray-200 dark:border-gray-700" loading="lazy">
             </div>
             <div class="md:col-span-2">
                 <h1 class="text-3xl font-medium text-gray-900 dark:text-white">Hey, I'm ${data.settings.name}</h1>
@@ -545,10 +548,9 @@
         <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed my-16">${data.settings.summary}</p>
         
         ${skillsHTML}
-		<div style="page-break-before: always;"></div>
 		${experienceHTML}
-        ${projectsHTML}
 		<div style="page-break-before: always;"></div>
+        ${projectsHTML}
         ${educationHTML}
         ${achievementsHTML}
         ${contactHTML}
