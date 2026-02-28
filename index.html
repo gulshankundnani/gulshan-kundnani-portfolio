@@ -82,17 +82,15 @@
       // PDF download function 
       function downloadPDF() 
       { 
+		  $(".no-pdf").hide();
         const element = document.body;
         const options = { 
           filename: 'Gulshan-Kundnani_Resume.pdf',
           html2canvas: { scale: 2 },
           jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' },
-          ignoreElements: (el) => 
-          { // Exclude navigation and any element with class "no-pdf" 
-            return el.classList.contains("no-pdf");
-          } 
         }; 
         html2pdf().set(options).from(element).save();
+		  $(".no-pdf").show();
       }
 
       // getIconSVG: Inline SVGs for all icons used in the portfolio
