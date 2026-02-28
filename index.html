@@ -533,14 +533,14 @@
           <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white"></button>
       </div>
       <main class="flex-grow max-w-4xl mx-auto px-6 pt-40 pb-8 animate-blur-in">
-        <header class="no-pdf grid md:grid-cols-3 gap-12 items-center mb-16">
+        <header class="grid md:grid-cols-3 gap-12 items-center mb-16">
             <div class="md:col-span-1 flex justify-center">
               <img src="${data.settings.profileImage}" alt="Profile" class="rounded-full w-40 h-40 object-cover border-4 border-gray-200 dark:border-gray-700" loading="lazy">
             </div>
             <div class="md:col-span-2">
                 <h1 class="text-3xl font-medium text-gray-900 dark:text-white">Hey, I'm ${data.settings.name}</h1>
                 <p class="text-lg text-gray-700 dark:text-gray-300 mt-2">${data.settings.title} &bull; ${data.settings.location}</p>
-                 <div class="flex flex-wrap gap-4 mt-6">
+                 <div class="no-pdf flex flex-wrap gap-4 mt-6">
                   ${ctaButtonsHTML}
                 </div>
             </div>
@@ -549,8 +549,8 @@
         <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed my-16">${data.settings.summary}</p>
         
         ${skillsHTML}
+		${experienceHTML}
         ${projectsHTML}
-        ${experienceHTML}
         ${educationHTML}
         ${achievementsHTML}
         ${contactHTML}
