@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gulshan Kundnani - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
 	<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
     <script>
       tailwind.config = {
@@ -84,16 +84,22 @@
       function downloadPDF() 
       { 
 		  $(".no-pdf").hide();
-        const element = document.body;
-        const options = { 
-          filename: 'Gulshan-Kundnani_Resume.pdf',
-          html2canvas: { scale: 2 },
-          jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' },
-		  ignoreElements: (el) => { // Skip header, no-pdf class, and hidden elements 
-			  const style = window.getComputedStyle(el);
-			  return ( el.tagName === "HEADER" || el.classList.contains("no-pdf") || style.display === "none" || style.visibility === "hidden" ); }
-        }; 
-        html2pdf().set(options).from(element).save();
+		  // Get the full HTML of the current page
+		  const htmlContent = document.documentElement.outerHTML;
+		
+		  // Create a Blob with the HTML content
+		  const blob = new Blob([htmlContent], { type: "text/html" });
+		
+		  // Create a temporary download link
+		  const link = document.createElement("a");
+		  link.href = URL.createObjectURL(blob);
+		  link.download = "my-webpage.pdf"; // filename
+		
+		  // Trigger the download
+		  link.click();
+		
+		  // Clean up
+		  URL.revokeObjectURL(link.href);
 		  $(".no-pdf").show();
       }
 
