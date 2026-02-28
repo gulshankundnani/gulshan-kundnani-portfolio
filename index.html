@@ -88,7 +88,7 @@
 		  const htmlContent = document.documentElement.outerHTML;
 		
 		  // Create a Blob with the HTML content
-		  const blob = new Blob([htmlContent], { type: "text/html" });
+		  const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
 		
 		  // Create a temporary download link
 		  const link = document.createElement("a");
