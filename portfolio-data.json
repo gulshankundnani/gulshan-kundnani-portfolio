@@ -13,10 +13,6 @@
         {
           "text": "Get In Touch",
           "url": "mailto:gulshankundnani@gmail.com"
-        },
-        {
-          "text": "Download",
-          "onclick": "DownloadPDF()"
         }
       ]
     },
@@ -141,6 +137,10 @@
       {
         "name": "Contact",
         "url": "#contact"
+      },
+      {
+        "name": "Download",
+        "url": "#download"
       }
     ]
   },
