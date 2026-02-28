@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gulshan Kundnani - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -76,6 +77,22 @@
             '<div class="text-red-500 p-8">Error loading portfolio data. Please make sure portfolio-data.json exists.</div>';
           throw error;
         }
+      }
+
+      // PDF download function 
+      function downloadPDF() 
+      { 
+        const element = document.body;
+        const options = { 
+          filename: 'Gulshan-Kundnani_Resume.pdf',
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' },
+          ignoreElements: (el) => 
+          { // Exclude navigation and any element with class "no-pdf" 
+            return el.classList.contains("no-pdf");
+          } 
+        }; 
+        html2pdf().set(options).from(element).save();
       }
 
       // getIconSVG: Inline SVGs for all icons used in the portfolio
@@ -243,16 +260,18 @@
           // --- Header ---
           let headerHTML = "";
           if (data.navigation && data.navigation.enabled) {
-            const navLinks = data.navigation.items
-              .map(
-                (item) => `
-        <a href="${item.url}" class="px-3 py-2 text-sm rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">${item.name}</a>
-      `
-              )
-              .join("");
+            const navLinks = data.navigation.items.map((item) => {
+            if (item.url === "#download") 
+            {
+              // Special case: download link 
+              return ` <a href="#" onclick="downloadPDF()" class="px-3 py-2 text-sm rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"> ${item.name} </a> `;
+            }
+  			// Normal navigation items 
+  			return ` <a href="${item.url}" class="px-3 py-2 text-sm rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"> ${item.name} </a> `;
+		}) .join("");
 
             headerHTML = `
-        <header class="hidden md:flex fixed top-4 left-1/2 -translate-x-1/2 z-50">
+        <header class="no-pdf hidden md:flex fixed top-4 left-1/2 -translate-x-1/2 z-50">
           <nav class="flex items-center gap-4 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm shadow-lg rounded-full px-4 py-2">
             <div class="flex items-center justify-center w-8 h-8 bg-gray-800/80 dark:bg-gray-200/80 text-gray-200 dark:text-gray-800 rounded-full font-bold text-sm tracking-wider">
               ${generateInitials(data.settings.name)}
@@ -291,7 +310,7 @@
             ctaButtonsHTML = data.sections.hero.ctaButtons
               .map(
                 (btn) => `
-        <a href="${btn.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+        <a href="${btn.url}" target="_blank" rel="noopener noreferrer" class="no-pdf inline-flex items-center gap-2 px-4 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
           ${btn.text}
         </a>`
               )
@@ -362,7 +381,7 @@
                   project.repoUrl
                     ? `<a href="${ensureUrl(
                         project.repoUrl
-                      )}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                      )}" target="_blank" rel="noopener noreferrer" class="no-pdf inline-flex items-center gap-1.5 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
                        ${getIconSVG("repo")}
                        <span>View Repo</span>
                      </a>`
@@ -485,7 +504,7 @@
                 <div class="flex flex-row flex-wrap justify-center gap-x-8 gap-y-2">
                   ${contactItems}
                 </div>
-                <div class="flex items-center gap-4 mt-4">
+                <div class="no-pdf flex items-center gap-4 mt-4">
                   ${socialLinksHTML}
                 </div>
             </div>
@@ -514,7 +533,7 @@
           <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white"></button>
       </div>
       <main class="flex-grow max-w-4xl mx-auto px-6 pt-40 pb-8 animate-blur-in">
-        <header class="grid md:grid-cols-3 gap-12 items-center mb-16">
+        <header class="no-pdf grid md:grid-cols-3 gap-12 items-center mb-16">
             <div class="md:col-span-1 flex justify-center">
               <img src="${data.settings.profileImage}" alt="Profile" class="rounded-full w-40 h-40 object-cover border-4 border-gray-200 dark:border-gray-700" loading="lazy">
             </div>
