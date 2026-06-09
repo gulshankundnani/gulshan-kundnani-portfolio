@@ -43,7 +43,13 @@
           "company": "MICM Net Solutions Pvt Ltd",
           "position": "Backend Developer",
           "period": "12/2019 - Present",
-          "description": "> Worked closely with cross-functional Agile teams to deliver features on time while managing client expectations effectively.<br/>> Integrated third-party APIs such as RealBooks API, Facebook API, Odoo API, etc ensuring data exchange and enhancing system functionality.<br/>> Developed import utilities for various modules to ensure bulk data migration.<br/>> Analyzed and Optimized code to improve system performance and low latency.<br/>> Learned and applied software development best practices and Agile methodologies.<br/>> Collaborated directly with clients to gather requirements, clarify project scope, and provide regular status updates, ensuring alignment between technical teams."
+          "description": "> Worked closely with cross-functional Agile teams to deliver features on time while managing client expectations effectively.<br/>> Integrated third-party APIs ensuring data exchange and enhancing system functionality.<br/>> Developed import utilities for various modules to ensure bulk data migration.<br/>> Analyzed and Optimized code to improve system performance and low latency.<br/>> Learned and applied software development best practices and Agile methodologies.<br/>> Collaborated directly with clients to gather requirements, clarify project scope, and provide regular status updates, ensuring alignment between technical teams."
+        },
+        {
+          "company": "MICM Net Solutions Pvt Ltd",
+          "position": "API Integration",
+          "period": "12/2019 - Present",
+          "description": "> RealBooks API - Post collection entries to RealBooks Accounting System.<br/>> Facebook API - Connect with forms and convert the data into leads/enquiry.<br/>> Odoo API - Post collection entries to Odoo Accounting System.<br/>> Edviron API - Integration with Payment Gateway Provider for payment including different modes and settlement."
         }
       ]
     },
