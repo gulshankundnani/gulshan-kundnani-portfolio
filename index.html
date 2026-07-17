@@ -317,27 +317,37 @@
           }
 
           // --- Skills ---
-          let skillsHTML = "";
-          if (data.sections.about && data.sections.about.enabled) {
-            if (
-              data.sections.about.skills &&
-              data.sections.about.skills.enabled
-            ) {
-              skillsHTML = `
-          <div class="mt-16">
-              <h2 class="font-bold text-xl text-gray-900 dark:text-white mb-6">${
-                data.sections.about.skills.title
-              }</h2>
-              <div class="flex flex-wrap gap-3">
-                  ${data.sections.about.skills.items
-                    .map(
-                      (skill) =>
-                        `<span class="text-sm px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-mono">${skill}</span>`
-                    )
-                    .join("")}
-              </div>
-          </div>
-        `;
+		let skillsHTML = "";
+		
+		if (
+		  data.sections.about &&
+		  data.sections.about.enabled &&
+		  Array.isArray(data.sections.about.skills)
+		) {
+		  skillsHTML = data.sections.about.skills
+		    .filter((section) => section.enabled)
+		    .map(
+		      (section) => `
+		        <div class="mt-16">
+		          <h2 class="font-bold text-xl text-gray-900 dark:text-white mb-6">
+		            ${section.title}
+		          </h2>
+		          <div class="flex flex-wrap gap-3">
+		            ${section.items
+		              .map(
+		                (skill) => `
+		                  <span class="text-sm px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-mono">
+		                    ${skill}
+		                  </span>
+		                `
+		              )
+		              .join("")}
+		          </div>
+		        </div>
+		      `
+		    )
+		    .join("");
+		}
             }
           }
 
