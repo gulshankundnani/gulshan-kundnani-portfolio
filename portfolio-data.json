@@ -26,12 +26,11 @@
           ".Net",
           "MVC",
           "SQL",
-          "Javascript",
-          "jQuery",
-          "Vuejs",
           "Html / Css",
-          "Ajax",
-          "Python"
+          "Javascript / jQuery",
+          "Vuejs",
+          "React - Beginner",
+          "Angular - Beginner"
         ]
       }
     },
