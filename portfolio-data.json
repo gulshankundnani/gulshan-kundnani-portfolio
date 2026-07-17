@@ -32,6 +32,17 @@
           "React - Beginner",
           "Angular - Beginner"
         ]
+      },
+      {
+        "enabled": true,
+        "title": "Soft Skills",
+        "items": [
+          "Communication",
+          "Quick Learner",
+          "Time Management",
+          "Multitasking",
+          "Adaptability"
+        ]
       }
     },
     "experience": {
