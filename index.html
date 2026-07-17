@@ -319,11 +319,8 @@
           // --- Skills ---
 		let skillsHTML = "";
 		
-		if (
-		  data.sections.about &&
-		  data.sections.about.enabled &&
-		  Array.isArray(data.sections.about.skills)
-		) {
+		if (data.sections.about &&data.sections.about.enabled && Array.isArray(data.sections.about.skills)) 
+		{
 		  skillsHTML = data.sections.about.skills
 		    .filter((section) => section.enabled)
 		    .map(
@@ -348,7 +345,6 @@
 		    )
 		    .join("");
 		}
-          }
 
           // --- Projects ---
           let projectsHTML = "";
