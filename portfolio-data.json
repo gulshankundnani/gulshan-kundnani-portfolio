@@ -18,7 +18,7 @@
     },
     "about": {
       "enabled": true,
-      "skills": {
+      "skills": [{
         "enabled": true,
         "title": "Technical Skills",
         "items": [
@@ -44,6 +44,7 @@
           "Adaptability"
         ]
       }
+      ]
     },
     "experience": {
       "enabled": true,
